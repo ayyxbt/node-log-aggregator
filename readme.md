@@ -2,7 +2,7 @@
  
 A small practice project exploring Node.js streams, HTTP backpressure, and NDJSON log ingestion.
  
-`producer.js` generates a large batch of fake log entries and streams them over HTTP to `server.js`, which listens for and receives them at `/ingest`. The producer handles backpressure manually — pausing writes when the connection buffer fills up and resuming once it drains — instead of blindly writing everything at once.
+`producer.js` generates a large batch of fake log entries and streams them over HTTP to `server.js`, which listens for and receives them at `/ingest`. The producer handles backpressure manually pausing writes when the connection buffer fills up and resuming once it drains instead of blindly writing everything at once.
  
 ## Why this project
  
